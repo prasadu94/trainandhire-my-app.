@@ -1,0 +1,32 @@
+<p>media works!</p>
+<!-- <div *ngFor="let media of medias" [ngClass]="{'visited': media.completed == true, 'unvisited':media.completed ==false }">
+    <p>{{media.userId}}</p>
+    <p>{{media.id}}</p>
+    <p>{{media.title}} </p>
+    <p>{{media.completed}}</p>
+
+</div>  -->
+
+
+<table class="table table-hover">
+    <thead>
+       
+            <input type="checkbox">
+            <th>ID</th>
+            <th>Title</th>
+
+            <th>Completed</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let media of medias" [ngClass]="{'visited': media.completed == true, 'unvisited':media.completed ==false }">
+
+            <input type="checkbox">
+
+            <td>{{media.id}}</td>
+            <td>{{media.title}}</td>
+            <td>{{media.completed}}</td>
+
+        </tr>
+    </tbody>
+</table>

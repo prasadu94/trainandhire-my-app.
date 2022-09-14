@@ -1,0 +1,20 @@
+.parent{
+    width: 100vw;
+    height: 100vw;
+    background-color: white;
+    display: flex;
+    
+}
+
+.child1{
+    color: white;
+    width: 20%;
+    height: 100%;
+    background-color: black;
+}
+
+.child2{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+}

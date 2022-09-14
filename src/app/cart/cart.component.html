@@ -1,0 +1,43 @@
+<p>cart works!</p>
+<div class="a">
+<h1>Employess1</h1>
+<label>name:</label>
+<input type="text" [(ngModel)]="name">
+<br><br>
+<label>age:</label>
+<input type="number" [(ngModel)]="age">
+<br><br>
+<label>company:</label>
+<input type="text" [(ngModel)]="company">
+<br><br>
+<label>package:</label>
+<input type="number" [(ngModel)]="package">
+<br><br>
+<button (click)="Register()">Register</button>
+<br><br>
+<button (click)="packagelowtohigh()"> package low to high </button>
+<button (click)="packagehightolow()"> package high to low</button>
+<br><br>
+<table>
+    <thead>
+        <tr>
+            <th>name|uppercase</th>
+            <th>age</th>
+            <th>company| price</th>
+            <th>package</th>
+            <th>deleteall</th>
+            <th><button (click)="clear()">clear</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;let i=index">
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.company}}</td>
+            <td [ngStyle]="{'color': employee.package>10000 ? 'red': 'green'}"
+                [ngClass]="{'bred': employee.package>10000, 'bgrenn':employee.package>10000 }">{{employee.package}}</td>
+            <td><button (click)="delete(i)">delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

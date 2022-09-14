@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <th>Vehicle</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Fuel</th>
+        <th>Color</th>
+        <th>Id</th>
+
+    </thead>
+        <tbody>
+            <tr *ngFor="let vehicle of vehicles">
+                <td>{{ vehicle.Vehicle }}</td>
+                <td>{{ vehicle.manufacturer }}</td>
+                <td>{{ vehicle.color }}</td>
+                <td>{{ vehicle.model }}</td>
+                <td>{{ vehicle.type }}</td>
+                <td>{{ vehicle.fuel }}</td>
+                <td>{{ vehicle.id }}</td>
+
+
+
+
+            </tr>
+        </tbody>
+    
+
+</table>

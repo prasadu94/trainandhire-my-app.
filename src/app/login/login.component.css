@@ -1,0 +1,13 @@
+.p{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 20vw;
+    height: 20vh;
+    background-color: aqua;
+}

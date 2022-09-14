@@ -1,0 +1,55 @@
+<p>databinding works!</p>
+<p>my age is {{age}}</p>
+<P>My name is {{user.name}}.iam form {{user.city}}</P>
+<p>name:{{students.name}}</p>
+<p>id{{students.id}}</p>
+<p>mark {{students.marks}}</p>
+
+<p>name:{{employee .name}} </p>
+<p>company{{employee.company}}</p>
+<p>package {{employee.package}}</p>
+
+
+<p     *ngFor="let user of users"
+>
+    name:{{user.name}}
+    city:{{user.city}}
+
+</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>city</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.city}}</td>
+
+        </tr>
+    </tbody>
+
+</table>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>id</th>
+            <th>marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of student">
+            <td>{{student.name}}</td>
+            <td>{{student.id }}</td>
+            <td>{{student.marks}}</td>
+
+
+        </tr>
+    </tbody>
+
+</table>
