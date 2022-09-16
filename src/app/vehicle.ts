@@ -5,6 +5,6 @@ export interface Vehicle {
     type: string;
     fuel: string;
     color: string;
-    id: number;
+    id: string;
 
 }

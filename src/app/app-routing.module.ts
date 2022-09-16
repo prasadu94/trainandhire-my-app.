@@ -4,6 +4,7 @@ import { AccountComponent } from './account/account.component';
 import { AuthGuard } from './auth.guard';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 import { ChartsComponent } from './charts/charts.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
@@ -12,11 +13,15 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { IteamComponent } from './iteam/iteam.component';
 import { LoginComponent } from './login/login.component';
 import { MediaComponent } from './media/media.component';
+import { NavComponent } from './nav/nav.component';
 import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PaytmComponent } from './paytm/paytm.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ProductComponent } from './product/product.component';
 import { SpurComponent } from './spur/spur.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
@@ -38,7 +43,19 @@ const routes: Routes = [
     {path:'iteam',component:IteamComponent},
     {path:'media',component:MediaComponent},
     {path:'create-vehicle',component:CreateVehicleComponent, canDeactivate: [NotifyGuard]},
-    {path:'create-user',component:CreateUserComponent}
+    {path:'create-user',component:CreateUserComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'product',component:ProductComponent},
+    {path:'nav',component:NavComponent},
+    {path:'cartlist',component:CartlistComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+
+
+    
+
+
+
+
 
 
   ]

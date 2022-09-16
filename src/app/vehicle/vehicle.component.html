@@ -8,6 +8,7 @@
         <th>Color</th>
         <th>Id</th>
 
+
     </thead>
         <tbody>
             <tr *ngFor="let vehicle of vehicles">
@@ -18,6 +19,10 @@
                 <td>{{ vehicle.type }}</td>
                 <td>{{ vehicle.fuel }}</td>
                 <td>{{ vehicle.id }}</td>
+                <td>
+                    <!-- <button class="bth bth-danger" (click)="delete(vehicle.id)">delete</button> -->
+                    <button class="bth bth-success" (click)="view(vehicle.id)">view</button>
+                </td>
 
 
 

@@ -17,7 +17,13 @@ export class VehicleService {
 
 
   }
- 
+   
+  getVehicle(id:string):Observable<Vehicle> {
+
+    return this._httpClient.get<Vehicle>('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction'+'/'+id);
+
+  
+  }
    createVehicle( vehicle: Vehicle ): Observable<Vehicle> {
 
       return this._httpClient.post<Vehicle>('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction', vehicle);
