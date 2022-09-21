@@ -32,6 +32,15 @@ export class VehicleComponent implements OnInit {
 
    }
 
+   edit(id:string){
+    this.router.navigateByUrl('/dashboard/edit-vehicle'+'/'+id);
+
+   }
+
+   delete(id:string){
+
+   }
+
   ngOnInit(): void {
   }
 

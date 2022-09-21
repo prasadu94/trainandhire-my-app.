@@ -1,5 +1,5 @@
 import { Component, createComponent, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { AuthGuard } from './auth.guard';
 import { CarsComponent } from './cars/cars.component';
@@ -48,14 +48,12 @@ const routes: Routes = [
     {path:'product',component:ProductComponent},
     {path:'nav',component:NavComponent},
     {path:'cartlist',component:CartlistComponent},
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
-
-
-    
-
-
-
-
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {
+      path: 'payment',
+      loadChildren: () =>import('./payment/payment.module').then(m => m.PaymentModule)
+    }
 
 
   ]
@@ -65,7 +63,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

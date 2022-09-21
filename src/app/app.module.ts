@@ -31,6 +31,7 @@ import { ProductComponent } from './product/product.component';
 import { NavComponent } from './nav/nav.component';
 import { CartlistComponent } from './cartlist/cartlist.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AaboutUsModule } from './aabout-us/aabout-us.module';
 
 
 
@@ -68,7 +69,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AaboutUsModule
     
   ],
   providers: [],
